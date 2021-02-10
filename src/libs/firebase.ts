@@ -1,5 +1,6 @@
 import firebase from 'firebase/app'
 import 'firebase/auth'
+import 'firebase/firestore'
 
 const config = {
   apiKey: process.env.FIREBASE_API_KEY,
@@ -12,6 +13,6 @@ const config = {
   measurementId: process.env.FIREBASE_MEASUREMENT_ID
 }
 
-const app = firebase.initializeApp(config)
-
-export default app
+if (process.browser && firebase.apps.length === 0) {
+  firebase.initializeApp(config)
+}
