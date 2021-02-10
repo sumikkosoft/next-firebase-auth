@@ -6,6 +6,7 @@ Next.js でのFirebase Login
 
 - Next.js
 - Firebase
+  - 匿名,Github,Google,Twitter
 - Recoil
 
 ## セットアップ、開発
